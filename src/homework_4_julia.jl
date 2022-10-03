@@ -1,6 +1,6 @@
 module homework_4_julia
 
-export TrackingFloat, homework_4_julia, +, *, -, /, sqrt, <
+export TrackingFloat, homework_4_julia, +, *, -, /, sqrt, <, maximum, abs
 
 using LinearAlgebra
 import Base: +, *, -, /, sqrt, <, promote_rule
