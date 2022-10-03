@@ -1,5 +1,7 @@
-using Pkg
-Pkg.add("https://github.com/larasupernovae/homework_4_julia")
+# using Pkg
+# Pkg.add(url="https://github.com/larasupernovae/homework_4_julia.jl")
+# add https://github.com/larasupernovae/homework_4_julia.jl.git
+using TrackingFloatHW2
 using Test
 
 @test v     == TrackingFloat(4,3)            # which we test using the macro @test

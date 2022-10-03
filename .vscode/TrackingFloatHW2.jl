@@ -26,6 +26,10 @@
 
 #################### Part 1 simple operations
 # Test your type
+module TrackingFloatHW2
+
+export TrackingFloatHW2, +, *, -, /, sqrt, <
+
 using LinearAlgebra
 import Base: +, *, -, /, sqrt, <, promote_rule
 
@@ -179,22 +183,3 @@ maximum(getmax.(sol2))
 # TrackingFloat{Int64} + TrackingFloat{Int64} isa TrackingFloat{Int64}
 # Can you make the following work too?
 # TrackingFloat{Int64} + TrackingFloat{Float64} isa TrackingFloat{Float64}
-
-struct TrackingFloatN{T}
-    x::T
-end
-
-function +(prva::TrackingFloatN{T}, druga::TrackingFloatN{T}) where T <: Real
-    zbir = prva.x + druga.x
-    return TrackingFloatN{T}(zbir)
-end
-
-function +(::Type{TrackingFloatN{T}},::Type{TrackingFloatN{T}}) where T <: Real
-    return TrackingFloatN{T}
-end
-
-import Base:isequal, isa
-
-bla = TrackingFloatN{Int64}(2) + TrackingFloatN{Int64}(2) 
-
-TrackingFloatN{Int64} + TrackingFloatN{Int64} isa TrackingFloatN{Int64}
