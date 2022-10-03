@@ -6,6 +6,8 @@ using homework_4_julia
 using Test
 using LinearAlgebra
 
+# sve je tu
+
 v = homework_4_julia.TrackingFloat(1.0) + homework_4_julia.TrackingFloat(3.0)
 @test v == homework_4_julia.TrackingFloat(4,3)            # which we test using the macro @test
 @test v*v == homework_4_julia.TrackingFloat(16, 4)
