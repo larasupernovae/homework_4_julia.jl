@@ -1,3 +1,5 @@
+using Pkg
+Pkg.add("https://github.com/larasupernovae/homework_4_julia.jl")
 using Test
 
 @test v     == TrackingFloat(4,3)            # which we test using the macro @test
